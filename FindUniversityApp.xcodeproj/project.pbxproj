@@ -13,9 +13,13 @@
 		7D8366622A4E07CC00FE51F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D8366602A4E07CC00FE51F4 /* Main.storyboard */; };
 		7D8366642A4E07CD00FE51F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D8366632A4E07CD00FE51F4 /* Assets.xcassets */; };
 		7D8366672A4E07CD00FE51F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D8366652A4E07CD00FE51F4 /* LaunchScreen.storyboard */; };
+		7D86EE892A4F540C00C7DC8E /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86EE882A4F540C00C7DC8E /* ThirdViewController.swift */; };
+		7D86EE8B2A4F544A00C7DC8E /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86EE8A2A4F544A00C7DC8E /* FourthViewController.swift */; };
+		81F9324452198AD16B8A544C /* Pods_FindUniversityApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC80D1681DDAAA1395310136 /* Pods_FindUniversityApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04D054FAA08705C7CC14476C /* Pods-FindUniversityApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindUniversityApp.release.xcconfig"; path = "Target Support Files/Pods-FindUniversityApp/Pods-FindUniversityApp.release.xcconfig"; sourceTree = "<group>"; };
 		7D8366572A4E07CC00FE51F4 /* FindUniversityApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindUniversityApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D83665A2A4E07CC00FE51F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D83665C2A4E07CC00FE51F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +28,10 @@
 		7D8366632A4E07CD00FE51F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D8366662A4E07CD00FE51F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D8366682A4E07CD00FE51F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D86EE882A4F540C00C7DC8E /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		7D86EE8A2A4F544A00C7DC8E /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		EC80D1681DDAAA1395310136 /* Pods_FindUniversityApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindUniversityApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFA89DC4936A82F4506B209B /* Pods-FindUniversityApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindUniversityApp.debug.xcconfig"; path = "Target Support Files/Pods-FindUniversityApp/Pods-FindUniversityApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81F9324452198AD16B8A544C /* Pods_FindUniversityApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +51,8 @@
 			children = (
 				7D8366592A4E07CC00FE51F4 /* FindUniversityApp */,
 				7D8366582A4E07CC00FE51F4 /* Products */,
+				A27ABBF2BABCBA459C209FC6 /* Pods */,
+				9B480DA924491260043BC97A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +70,31 @@
 				7D83665A2A4E07CC00FE51F4 /* AppDelegate.swift */,
 				7D83665C2A4E07CC00FE51F4 /* SceneDelegate.swift */,
 				7D83665E2A4E07CC00FE51F4 /* ViewController.swift */,
+				7D86EE882A4F540C00C7DC8E /* ThirdViewController.swift */,
+				7D86EE8A2A4F544A00C7DC8E /* FourthViewController.swift */,
 				7D8366602A4E07CC00FE51F4 /* Main.storyboard */,
 				7D8366632A4E07CD00FE51F4 /* Assets.xcassets */,
 				7D8366652A4E07CD00FE51F4 /* LaunchScreen.storyboard */,
 				7D8366682A4E07CD00FE51F4 /* Info.plist */,
 			);
 			path = FindUniversityApp;
+			sourceTree = "<group>";
+		};
+		9B480DA924491260043BC97A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC80D1681DDAAA1395310136 /* Pods_FindUniversityApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A27ABBF2BABCBA459C209FC6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EFA89DC4936A82F4506B209B /* Pods-FindUniversityApp.debug.xcconfig */,
+				04D054FAA08705C7CC14476C /* Pods-FindUniversityApp.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7D83666B2A4E07CD00FE51F4 /* Build configuration list for PBXNativeTarget "FindUniversityApp" */;
 			buildPhases = (
+				7E1E770CD6C21405C8EAD59A /* [CP] Check Pods Manifest.lock */,
 				7D8366532A4E07CC00FE51F4 /* Sources */,
 				7D8366542A4E07CC00FE51F4 /* Frameworks */,
 				7D8366552A4E07CC00FE51F4 /* Resources */,
+				6CB24304A3650506364A7C4D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +165,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6CB24304A3650506364A7C4D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindUniversityApp/Pods-FindUniversityApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindUniversityApp/Pods-FindUniversityApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindUniversityApp/Pods-FindUniversityApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E1E770CD6C21405C8EAD59A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindUniversityApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7D8366532A4E07CC00FE51F4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D86EE8B2A4F544A00C7DC8E /* FourthViewController.swift in Sources */,
 				7D83665F2A4E07CC00FE51F4 /* ViewController.swift in Sources */,
 				7D83665B2A4E07CC00FE51F4 /* AppDelegate.swift in Sources */,
 				7D83665D2A4E07CC00FE51F4 /* SceneDelegate.swift in Sources */,
+				7D86EE892A4F540C00C7DC8E /* ThirdViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +358,7 @@
 		};
 		7D83666C2A4E07CD00FE51F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFA89DC4936A82F4506B209B /* Pods-FindUniversityApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -309,6 +386,7 @@
 		};
 		7D83666D2A4E07CD00FE51F4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04D054FAA08705C7CC14476C /* Pods-FindUniversityApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
