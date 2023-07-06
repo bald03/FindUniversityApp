@@ -1,5 +1,5 @@
 //
-//  1.swift
+//  SecondViewController.swift
 //  FindUniversityApp
 //
 //  Created by Bariev Daniil on 30.06.2023.
@@ -62,11 +62,14 @@ final class SecondViewController: BaseViewController, UITableViewDelegate, UITab
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
         cell.textLabel?.text = namesOfUniversities[indexPath.row].name.capitalized
+        let filtered = namesOfUniversities.filter { $0.code == "CL" }
+        print(filtered)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let thirdViewController = ThirdViewController()
+        thirdViewController.currentUniversity = namesOfUniversities[indexPath.row]
         navigationController?.pushViewController(thirdViewController, animated: true)
     }
     

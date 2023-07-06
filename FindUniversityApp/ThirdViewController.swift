@@ -1,5 +1,5 @@
 //
-//  1.swift
+//  ThirdViewController.swift
 //  FindUniversityApp
 //
 //  Created by Bariev Daniil on 30.06.2023.
@@ -11,6 +11,8 @@ import UIKit
 
 final class ThirdViewController: BaseViewController {
     
+    var currentUniversity: Universities?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initialize()
@@ -20,7 +22,7 @@ final class ThirdViewController: BaseViewController {
         view.backgroundColor = UIColor(red: 107/255, green: 124/255, blue: 255/255, alpha: 1)
         
         let label = UILabel()
-        label.text = "Информация об университете"
+        label.text = currentUniversity?.name
         label.textAlignment = .center
         label.numberOfLines = 0
         label.textColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
@@ -72,7 +74,10 @@ final class ThirdViewController: BaseViewController {
     
     
     @objc private func openUniversityWebsite() {
-        if let url = URL(string: "https://www.volgatech.net/") {
+        guard let currentUniversity = currentUniversity else { return
+        }
+        let link = currentUniversity.webPages.first!
+        if let url = URL(string: link) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }
