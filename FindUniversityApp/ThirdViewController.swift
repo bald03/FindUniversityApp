@@ -9,27 +9,26 @@ import Foundation
 import SnapKit
 import UIKit
 
-class thirdViewController: UIViewController {
+final class ThirdViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initialize()
     }
     
-    
     private func initialize() {
         view.backgroundColor = UIColor(red: 107/255, green: 124/255, blue: 255/255, alpha: 1)
         
         let label = UILabel()
-        label.text = " Информация об университете"
+        label.text = "Информация об университете"
         label.textAlignment = .center
         label.numberOfLines = 0
-        label.textColor = UIColor(red: 70/255, green: 108/255, blue: 255/255, alpha: 1)
+        label.textColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
         label.font = UIFont.boldSystemFont(ofSize: 24)
         view.addSubview(label)
         label.snp.makeConstraints { make in
             make.left.right.equalToSuperview().inset(30)
-            make.top.equalToSuperview().inset(180)
+            make.top.equalToSuperview().inset(60)
         }
         
         let button = UIButton(type: .system)
@@ -38,8 +37,9 @@ class thirdViewController: UIViewController {
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         button.layer.cornerRadius = 24
-        button.setTitle("Выбрать", for: .normal)
+        button.setTitle("Оставить отзыв", for: .normal)
         button.heightAnchor.constraint(equalToConstant: 48).isActive = true
+        button.addTarget(self, action: #selector(openReviewPage), for: .touchUpInside)
         button.snp.makeConstraints { make in
             make.left.right.equalToSuperview().inset(30)
             make.bottom.equalToSuperview().inset(40)
@@ -71,9 +71,15 @@ class thirdViewController: UIViewController {
     }
     
     
-    @objc func openUniversityWebsite() {
+    @objc private func openUniversityWebsite() {
         if let url = URL(string: "https://www.volgatech.net/") {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }
+    
+    @objc private func openReviewPage() {
+        let fourthVC = FourthViewController()
+        navigationController?.pushViewController(fourthVC, animated: true)
+    }
 }
+

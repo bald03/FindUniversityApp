@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44D5C4342A516CFE000E7896 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D5C4332A516CFE000E7896 /* BaseViewController.swift */; };
+		44D5C4362A517749000E7896 /* UITrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D5C4352A517749000E7896 /* UITrait.swift */; };
+		7D503FAB2A5665CD00587BD2 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D503FAA2A5665CD00587BD2 /* SecondViewController.swift */; };
+		7D503FAD2A566D1B00587BD2 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D503FAC2A566D1B00587BD2 /* APIManager.swift */; };
 		7D83665B2A4E07CC00FE51F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D83665A2A4E07CC00FE51F4 /* AppDelegate.swift */; };
 		7D83665D2A4E07CC00FE51F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D83665C2A4E07CC00FE51F4 /* SceneDelegate.swift */; };
 		7D83665F2A4E07CC00FE51F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D83665E2A4E07CC00FE51F4 /* ViewController.swift */; };
@@ -15,11 +19,15 @@
 		7D8366672A4E07CD00FE51F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D8366652A4E07CD00FE51F4 /* LaunchScreen.storyboard */; };
 		7D86EE892A4F540C00C7DC8E /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86EE882A4F540C00C7DC8E /* ThirdViewController.swift */; };
 		7D86EE8B2A4F544A00C7DC8E /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86EE8A2A4F544A00C7DC8E /* FourthViewController.swift */; };
-		81F9324452198AD16B8A544C /* Pods_FindUniversityApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC80D1681DDAAA1395310136 /* Pods_FindUniversityApp.framework */; };
+		84B26B46C207A463A01CF322 /* Pods_FindUniversityApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836AFF43D98908BA444D2A19 /* Pods_FindUniversityApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		04D054FAA08705C7CC14476C /* Pods-FindUniversityApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindUniversityApp.release.xcconfig"; path = "Target Support Files/Pods-FindUniversityApp/Pods-FindUniversityApp.release.xcconfig"; sourceTree = "<group>"; };
+		44D5C4332A516CFE000E7896 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		44D5C4352A517749000E7896 /* UITrait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITrait.swift; sourceTree = "<group>"; };
+		482D6E101A770EC14348560E /* Pods-FindUniversityApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindUniversityApp.release.xcconfig"; path = "Target Support Files/Pods-FindUniversityApp/Pods-FindUniversityApp.release.xcconfig"; sourceTree = "<group>"; };
+		7D503FAA2A5665CD00587BD2 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		7D503FAC2A566D1B00587BD2 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		7D8366572A4E07CC00FE51F4 /* FindUniversityApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindUniversityApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D83665A2A4E07CC00FE51F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D83665C2A4E07CC00FE51F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,8 +38,8 @@
 		7D8366682A4E07CD00FE51F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D86EE882A4F540C00C7DC8E /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		7D86EE8A2A4F544A00C7DC8E /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
-		EC80D1681DDAAA1395310136 /* Pods_FindUniversityApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindUniversityApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EFA89DC4936A82F4506B209B /* Pods-FindUniversityApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindUniversityApp.debug.xcconfig"; path = "Target Support Files/Pods-FindUniversityApp/Pods-FindUniversityApp.debug.xcconfig"; sourceTree = "<group>"; };
+		836AFF43D98908BA444D2A19 /* Pods_FindUniversityApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindUniversityApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0C543435F6023424A5799E0 /* Pods-FindUniversityApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindUniversityApp.debug.xcconfig"; path = "Target Support Files/Pods-FindUniversityApp/Pods-FindUniversityApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,20 +47,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81F9324452198AD16B8A544C /* Pods_FindUniversityApp.framework in Frameworks */,
+				84B26B46C207A463A01CF322 /* Pods_FindUniversityApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52B02F05E2FFD9D56BC7ECC5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				836AFF43D98908BA444D2A19 /* Pods_FindUniversityApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7D83664E2A4E07CC00FE51F4 = {
 			isa = PBXGroup;
 			children = (
 				7D8366592A4E07CC00FE51F4 /* FindUniversityApp */,
 				7D8366582A4E07CC00FE51F4 /* Products */,
 				A27ABBF2BABCBA459C209FC6 /* Pods */,
-				9B480DA924491260043BC97A /* Frameworks */,
+				52B02F05E2FFD9D56BC7ECC5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,28 +87,24 @@
 				7D83665C2A4E07CC00FE51F4 /* SceneDelegate.swift */,
 				7D83665E2A4E07CC00FE51F4 /* ViewController.swift */,
 				7D86EE882A4F540C00C7DC8E /* ThirdViewController.swift */,
+				7D503FAA2A5665CD00587BD2 /* SecondViewController.swift */,
+				7D503FAC2A566D1B00587BD2 /* APIManager.swift */,
 				7D86EE8A2A4F544A00C7DC8E /* FourthViewController.swift */,
 				7D8366602A4E07CC00FE51F4 /* Main.storyboard */,
 				7D8366632A4E07CD00FE51F4 /* Assets.xcassets */,
 				7D8366652A4E07CD00FE51F4 /* LaunchScreen.storyboard */,
 				7D8366682A4E07CD00FE51F4 /* Info.plist */,
+				44D5C4332A516CFE000E7896 /* BaseViewController.swift */,
+				44D5C4352A517749000E7896 /* UITrait.swift */,
 			);
 			path = FindUniversityApp;
-			sourceTree = "<group>";
-		};
-		9B480DA924491260043BC97A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				EC80D1681DDAAA1395310136 /* Pods_FindUniversityApp.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		A27ABBF2BABCBA459C209FC6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				EFA89DC4936A82F4506B209B /* Pods-FindUniversityApp.debug.xcconfig */,
-				04D054FAA08705C7CC14476C /* Pods-FindUniversityApp.release.xcconfig */,
+				E0C543435F6023424A5799E0 /* Pods-FindUniversityApp.debug.xcconfig */,
+				482D6E101A770EC14348560E /* Pods-FindUniversityApp.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -104,11 +116,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7D83666B2A4E07CD00FE51F4 /* Build configuration list for PBXNativeTarget "FindUniversityApp" */;
 			buildPhases = (
-				7E1E770CD6C21405C8EAD59A /* [CP] Check Pods Manifest.lock */,
+				2650028AE10285D3824F21CA /* [CP] Check Pods Manifest.lock */,
 				7D8366532A4E07CC00FE51F4 /* Sources */,
 				7D8366542A4E07CC00FE51F4 /* Frameworks */,
 				7D8366552A4E07CC00FE51F4 /* Resources */,
-				6CB24304A3650506364A7C4D /* [CP] Embed Pods Frameworks */,
+				0E05F3E6F36ACBEB0EC97AB3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -166,7 +178,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6CB24304A3650506364A7C4D /* [CP] Embed Pods Frameworks */ = {
+		0E05F3E6F36ACBEB0EC97AB3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -183,7 +195,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindUniversityApp/Pods-FindUniversityApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7E1E770CD6C21405C8EAD59A /* [CP] Check Pods Manifest.lock */ = {
+		2650028AE10285D3824F21CA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -212,11 +224,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D503FAB2A5665CD00587BD2 /* SecondViewController.swift in Sources */,
 				7D86EE8B2A4F544A00C7DC8E /* FourthViewController.swift in Sources */,
 				7D83665F2A4E07CC00FE51F4 /* ViewController.swift in Sources */,
+				7D503FAD2A566D1B00587BD2 /* APIManager.swift in Sources */,
 				7D83665B2A4E07CC00FE51F4 /* AppDelegate.swift in Sources */,
+				44D5C4362A517749000E7896 /* UITrait.swift in Sources */,
 				7D83665D2A4E07CC00FE51F4 /* SceneDelegate.swift in Sources */,
 				7D86EE892A4F540C00C7DC8E /* ThirdViewController.swift in Sources */,
+				44D5C4342A516CFE000E7896 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +374,7 @@
 		};
 		7D83666C2A4E07CD00FE51F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EFA89DC4936A82F4506B209B /* Pods-FindUniversityApp.debug.xcconfig */;
+			baseConfigurationReference = E0C543435F6023424A5799E0 /* Pods-FindUniversityApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -386,7 +402,7 @@
 		};
 		7D83666D2A4E07CD00FE51F4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 04D054FAA08705C7CC14476C /* Pods-FindUniversityApp.release.xcconfig */;
+			baseConfigurationReference = 482D6E101A770EC14348560E /* Pods-FindUniversityApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

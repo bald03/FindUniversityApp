@@ -8,47 +8,37 @@
 import SnapKit
 import UIKit
 
-class ViewController: UIViewController {
-
-    let countriesForPickerView = ["Россия", "США", "Германия", "Франция", "Великобритания", "Турция", "Китай"]
+final class ViewController: BaseViewController {
     
-    let resultOfPickerLabel = UILabel()
+    private lazy var resultOfPickerLabel = UILabel()
+    private lazy var welcomeLabel = UILabel()
+    private lazy var extraLabel = UILabel()
+    private lazy var pickerView = UIPickerView()
+    private lazy var button = UIButton(type: .system)
+    
+    let commonString = "Текущая страна: "
+    let countriesForPickerView = ["Бельгия", "Великобритания", "Германия", "Китай", "США", "Франция", "Швеция"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initialize()
+        setupUI()
     }
     
-    
-    private func initialize() {
-        view.backgroundColor = UIColor(red: 107/255, green: 124/255, blue: 255/255, alpha: 1)
+    private func setupUI() {
+        setupLabel(welcomeLabel, text: "Добро пожаловать!", fontSize: 24)
+        setupConstraints()
         
-    
-        
-        let label = UILabel()
-        label.text = "Добро пожаловать!"
-        label.textAlignment = .center
-        label.textColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
-        label.font = UIFont.boldSystemFont(ofSize: 24)
-        view.addSubview(label)
-        label.snp.makeConstraints { make in
-            make.left.equalToSuperview().inset(90)
-            make.top.equalToSuperview().inset(180)
-        }
-        
-        let extraLabel = UILabel()
         extraLabel.text = "Выберите страну для начала работы"
         extraLabel.numberOfLines = 0
         extraLabel.textAlignment = .center
-        extraLabel.textColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
-        extraLabel.font = UIFont.boldSystemFont(ofSize: 20)
+        extraLabel.textColor = UIColor.white
+        extraLabel.font = UIFont.boldSystemFont(ofSize: 24)
         view.addSubview(extraLabel)
         extraLabel.snp.makeConstraints { make in
             make.left.right.equalToSuperview().inset(30)
-            make.top.equalTo(label).inset(70)
+            make.top.equalTo(welcomeLabel).inset(150)
         }
         
-        let pickerView = UIPickerView()
         pickerView.dataSource = self
         pickerView.delegate = self
         pickerView.backgroundColor = UIColor.clear
@@ -59,18 +49,17 @@ class ViewController: UIViewController {
         }
         
         view.addSubview(resultOfPickerLabel)
-        resultOfPickerLabel.text = "Текущая страна: "
-        extraLabel.numberOfLines = 0
+        resultOfPickerLabel.numberOfLines = 0
+        resultOfPickerLabel.text = commonString + countriesForPickerView.first!
         resultOfPickerLabel.textAlignment = .center
-        resultOfPickerLabel.textColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
-        resultOfPickerLabel.font = UIFont.boldSystemFont(ofSize: 20)
-        view.addSubview(extraLabel)
+        resultOfPickerLabel.textColor = UIColor.white
+        resultOfPickerLabel.font = UIFont.boldSystemFont(ofSize: 24)
+        view.addSubview(resultOfPickerLabel)
         resultOfPickerLabel.snp.makeConstraints { make in
             make.left.right.equalToSuperview().inset(30)
-            make.top.equalTo(pickerView).inset(300)
+            make.top.equalTo(pickerView).inset(340)
         }
         
-        let button = UIButton(type: .system)
         view.addSubview(button)
         button.backgroundColor = UIColor(red: 63/255, green: 56/255, blue: 221/255, alpha: 1)
         button.setTitleColor(.white, for: .normal)
@@ -81,37 +70,49 @@ class ViewController: UIViewController {
         button.addTarget(self, action: #selector(openUniversityWebsite), for: .touchUpInside)
         button.snp.makeConstraints { make in
             make.left.right.equalToSuperview().inset(30)
-            make.top.equalTo(resultOfPickerLabel).inset(100)
+            make.bottom.equalToSuperview().inset(40)
+        }
+    }
+    
+    private func setupConstraints() {
+        welcomeLabel.snp.makeConstraints { make in
+            make.left.equalToSuperview().inset(90)
+            make.top.equalToSuperview().inset(130)
+        }
+    }
+    
+    @objc private func openUniversityWebsite() {
+        let vc = SecondViewController()
+        vc.selectedCountry = resultOfPickerLabel.text?.replacingOccurrences(of: commonString, with: "")
+        navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension ViewController: UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+            return 1
         }
         
+        func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+            return countriesForPickerView.count
+        }
     }
-    @objc func openUniversityWebsite() {
-        let vs = thirdViewController()
-        show(vs, sender: nil)
-    }
-}
-
-extension ViewController:UIPickerViewDataSource {
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return countriesForPickerView.count
-    }
-    
+extension ViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let selectedValue = countriesForPickerView[row]
-        resultOfPickerLabel.text = selectedValue
+            let selectedValue = countriesForPickerView[row]
+            resultOfPickerLabel.text = commonString + selectedValue
+        }
+    
+    
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let title = countriesForPickerView[row]
+        let attributes: [NSAttributedString.Key: Any] = [
+            .foregroundColor: UIColor.white
+        ]
+        return NSAttributedString(string: title, attributes: attributes)
     }
 }
 
-extension ViewController:UIPickerViewDelegate {
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        let countriesForPickerView = ["Россия", "США", "Германия", "Франция", "Великобритания", "Турция", "Китай"]
-        return countriesForPickerView[row]
-    }
-}
 
 
 
